@@ -1,0 +1,27 @@
+<po-page-default p-title="PO UI">
+  <div class="po-row">
+    <po-datepicker
+      name="Data"
+      [(ngModel)]="simulador.dt_deposito"
+      p-clean
+      p-label="Data:"
+      p-locale="pt"
+      p-format="dd/mm/yyyy"
+      p-required
+    ></po-datepicker>
+    <po-decimal
+      name="valor"
+      [(ngModel)]="simulador.valor"
+      p-label="Valor"
+      p-required
+    ></po-decimal>
+    <po-button p-label="Adicionar" (p-click)="adicionarSimulador($event)">
+    </po-button>
+  </div>
+  <po-table
+    [p-height]="tamanho"
+    [p-columns]="colunasTabelaSimular"
+    [p-items]="itensTabelaSimular"
+  >
+  </po-table>
+</po-page-default>
